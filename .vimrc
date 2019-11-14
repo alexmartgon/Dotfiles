@@ -11,13 +11,18 @@ let mapleader=","
 "remaps, or at least an attempt to.
 inoremap {<cr> {<cr>}<c-o><s-o><tab>
 "Working!
-inoremap :<cr> :<cr><tab>
+inoremap :<cr> :<cr><tab> 
 "Working!
 inoremap ( ()<Left>
 "Working!
+inoremap " "" <Left><Left>
+"Working!
 
-
-
+"Spelling and word recommendation
+"setlocal spell spelllang=en_us
+"set thesaurus+=/home/test/.vim/thesaurus/mthesaur.txt
+"set complete +=s
+"lets see if this works
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -34,4 +39,4 @@ Plugin 'scrooloose/nerdcommenter'
 call vundle#end()            " required
 " End putting plugins here 
 "filetype plugin indent on "Idk why indent breaks it
-filetype plugin on    " required   
+filetype plugin on    " required

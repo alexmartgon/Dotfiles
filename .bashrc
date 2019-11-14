@@ -1,4 +1,6 @@
-#/.bashrc: executed by bash(1) for non-login shells.                    
+# TO SEE ANY ADD-ONS MADE BY ME, GO TO BOTTOM OF FILE
+
+# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -47,12 +49,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-  # We have color support; assume it's compliant with Ecma-48
-  # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-  # a case would tend to support setf rather than setaf.)
-  color_prompt=yes
+	# We have color support; assume it's compliant with Ecma-48
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# a case would tend to support setf rather than setaf.)
+	color_prompt=yes
     else
-  color_prompt=
+	color_prompt=
     fi
 fi
 
@@ -86,12 +88,6 @@ fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -99,7 +95,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.                                                                                                                                             
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -114,4 +110,24 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi 
+fi
+
+
+#Personal Profile!                         
+#_________________________________ALIASES___________________________________
+#ls related:
+alias la='ls -a'
+alias ll='ls -alF'
+alias lf='ls -CF'
+alias al='la'
+alias sl='ls'
+
+#Compiling files
+alias cc='g++ *.cpp *.h' #compiles all possible cpp and h files inside a folder for C++
+alias cr='g++ *.cpp *.h; ./a.out; rm a.out' #compiles and runs all possible cpp and h files inside a folder for C++. Then after running it removes the a.out file
+alias cpp='g++ *.cpp; ./a.out; rm a.out' #same but only cpp files.
+ 
+#Directory accessing related:
+alias CS='cd ~; cd Classes/Computer\ Science/'
+alias Linux='cd ~; cd Classes/Computer\ Science/CSCI\ 274/'
+alias DS='cd ~; cd Classes/Computer\ Science/CSCI\ 262/'
